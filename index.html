@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+.robot{
+  position: relative;
+  left: 600px;
+  bottom: 100px;
+}
+@keyframes blink {
+  50% {
+    background: radial-gradient(circle, red 15%, transparent 40%), #91BCCA;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #91BCCA;
+  }
+}
+@-moz-keyframes blink {
+  50% {
+    background: -moz-radial-gradient(circle, red 15%, transparent 40%), #91BCCA;
+  }
+}
+.laser {
+  animation: blink .5s infinite;
+  -webkit-animation: blink .5s infinite;
+  -moz-animation: blink .5s infinite;
+}
+.brain{
+  background: radial-gradient(circle, white 15%, transparent 40%), #282a39;
+  background: -moz-radial-gradient(circle, white 15%, transparent 40%), #282a39;
+  background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #282a39;
+  background-size: 60px 100px;
+  height: 100px;
+  border-radius: 50px;
+  width: 120px;
+  border: 5px solid #999;
+  position: relative;
+  left: 0px;
+}
+.right-beep-antenna{
+  width: 2px;
+  height: 0px;
+  border: 6px solid transparent;
+  border-top: 1px solid  grey;
+  border-bottom: 80px solid  grey;
+  position: relative;
+  top: 175px;
+  right: 35px;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+}
+.left-beep-antenna{
+  width: 2px;
+  height: 0px;
+  border: 6px solid transparent;
+  border-top: 1px solid  grey;
+  border-bottom: 80px solid  grey;
+  position: relative;
+  left: 145px;
+  top: 95px;
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+}
+.neck-part{
+  width: 20px;
+  height: 10;
+  border: 10px solid transparent;
+  border-top: 20px solid  #282a39;
+  border-bottom: 1px solid  #282a39;
+  position: relative;
+  left: 45px;
+}
+.rorer{
+  height: 250px;
+  width: 250px;
+  right: 60px;
+  background:#282a39 ;
+  border-radius: 20px;
+  border: 5px solid grey;
+  position: relative;
+  bottom: 160px;
+}
+.rorer1{
+  height: 150px;
+  width: 150px;
+  right: 60px;
+  background:grey ;
+  border-radius: 20px;
+  border: 5px solid black;
+  position: relative;
+  left: -10px;
+  top: 44px;
+  z-index: 1;
+}
+.left-arm{
+    color:#282a39;
+    font-size: 200px;
+    position: relative;
+    font-family: 'Poller One', verdana, arial, sans-serif;
+    font-weight: bold;
+    transform: rotate(200deg);
+    -webkit-transform: rotate(200deg);
+    -moz-transform: rotate(200deg);
+    top: -40px;
+    left: -250px;
+    z-index: -1;
+}
+.right-arm{
+  font-size: 200px;
+  color: #282a39;
+  font-weight: bold;
+  position: relative;
+font-family: 'Poller One', verdana, arial, sans-serif;
+  transform: scaleY(-1) rotate(20deg);
+  -webkit-transform: scaleY(-1) rotate(20deg);
+  -moz-transform: scaleY(-1) rotate(20deg);
+   left: 250px;
+  top: -280px;
+  z-index: -1;
+}
+.leg1{
+    color:#282a39;
+    font-size: 200px;
+    font-weight: bold;
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  margin: -220px 1270px 90px 0px;
+  z-index: -1;
+}
+.leg2{
+  color:#282a39;
+  font-size: 200px;
+  font-weight: bold;
+font-family: 'Poller One', verdana, arial, sans-serif;
+transform: rotate(-180deg);
+-webkit-transform: rotate(-180deg);
+-moz-transform: rotate(-180deg);
+margin: -327px 1161px 90px 0px;
+z-index: -1;
+}
+.tier1{
+  height: 40px;
+  width: 40px;
+  background: #ccc;
+  border-radius: 40px;
+  border: 15px solid #999;
+  position: relative;
+  top: -145px;
+  right: 20px;
+  z-index: -20;
+}
+.tier2{
+  height: 40px;
+  width: 40px;
+  background: #ccc;
+  border-radius: 40px;
+  border: 15px solid #999;
+  position: relative;
+  top: -212px;
+  left: 90px;
+  z-index: -20;
+}
+@-moz-keyframes troll {
+    0%   {left:600px;}
+    20%  {left:550px;}
+    40%  {left:500px;}
+    60%  {left:450px;}
+    80%  {left:400px;}
+    100% {left:350px;}
+}
+
+@-webkit-keyframes troll {
+  0%   {left:600px;}
+  20%  {left:550px;}
+  40%  {left:500px;}
+  60%  {left:450px;}
+  80%  {left:400px;}
+  100% {left:350px;}
+}
+@keyframes troll {
+  0%   {left:600px;}
+  20%  {left:550px;}
+  40%  {left:500px;}
+  60%  {left:450px;}
+  80%  {left:400px;}
+  100% {left:350px;}
+}
+img {
+    top: -800px;
+    width: 150px;
+    height: 150px;
+    border-radius: 60px;
+    position:relative;
+    -webkit-animation-name: troll;
+    -webkit-animation-duration: 3s;
+    -moz-animation-name: troll;
+    -moz-animation-duration: 3s;
+    animation-name: troll;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+</style>
+</head>
+<body>
+<div class="robot">
+  <div class="upper-antenna">
+<div class="right-beep-antenna"></div>
+<div class="left-beep-antenna"></div>
+  <div class="brain"></div>
+  <div class="neck-part"></div>
+  <div class="rorer1"></div>
+  <div class="rorer">
+      <div class="left-arm">j</div>
+      <div class="right-arm">j</div>
+  </div>
+  <div class="leg1">I</div>
+  <div class="leg2">I</div>
+
+  <div class="tier1"></div>
+  <div class="tier2"></div>
+
+ <button class="flash">laser eyes on/off</button>
+ <button class="color">change color!</button>
+ <button class="troll">Move</button>
+ </div>
+<img src="http://i.imgur.com/hP0VyqK.png">
+<script>
+// When eyes button is clicked, toggle laser class on brain
+$(".flash").click(function() {
+  $(".brain").toggleClass('laser');
+});
+
+$(".color").click(function() {
+
+  var red = Math.floor(Math.random() * 255);
+  var green = Math.floor(Math.random() * 255);
+  var blue = Math.floor(Math.random() * 255);
+  var randomRGBA= 'rgba('+red +','+ green +','+ blue+',1)';
+  $("body").css("background", randomRGBA);
+  //alert(red + "," + green + "," + blue);
+});
+$(".troll").click(function() {
+  $("img").toggle();
+});
+</script>
+</body>
